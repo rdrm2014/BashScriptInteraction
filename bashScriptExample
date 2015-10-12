@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ "$#" -ne 4 ]; then
+    echo "Illegal number of parameters"
+    echo "./bashScriptExample --name <NAME> --repeat <Times>"
+    exit 1
+fi
+
+c=1
+while [ $c -le $4 ]
+do
+	read data
+	printf "%s" "$data"
+	((c++))
+done
